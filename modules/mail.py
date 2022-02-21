@@ -4,7 +4,7 @@ import smtplib
 class EMail:
     _HOST = 'smtp.gmail.com'    # Гугловский адрес хоста
     _TO = 'leisan02bk.ru@gmail.com'  # Адрес эл почты получателя
-    _FROM = 'novikov.vlad1999@gmail.com'    # Адрес эл почты отправителя
+    _FROM = '<email>'    # Адрес эл почты отправителя
     _SUBJECT = 'Test EMail'     # Заголовок письма
     text = ''   # Текст письма. Менять не нужно. Формируется при отправке запроса
 
@@ -26,7 +26,7 @@ class EMail:
         try:
             server = smtplib.SMTP_SSL(self._HOST, 465)
             server.ehlo()
-            server.login('novikov.vlad1999@gmail.com', "AAAHULKMAN2705071206hulkmanaaa")
+            server.login('<email>', "<password>>")
             server.sendmail(self._FROM, [self._TO], body)
             server.close()
 

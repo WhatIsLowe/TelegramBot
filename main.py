@@ -4,7 +4,7 @@ import datetime
 import calendar
 
 
-TOKEN = ''
+TOKEN = '<token>'
 
 # Создаем класс пользователя. Здесь будем хранить временные данные
 class User:
